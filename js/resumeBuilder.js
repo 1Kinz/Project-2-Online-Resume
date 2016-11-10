@@ -130,9 +130,9 @@ work.display = function() {
         var formattedDates = HTMLworkDates.replace('%data%', job.dates);
         var formattedDescription = HTMLworkDescription.replace('%data%', job.description);
 
-        var employerTitle = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
+        var formattedEmployerCombined = formattedEmployer + formattedTitle + formattedLocation + formattedDates + formattedDescription;
 
-        $('.work-entry:last').append(employerTitle);
+        $('.work-entry:last').append(formattedEmployerCombined);
     });
 };
 
@@ -148,9 +148,9 @@ projects.display = function() {
         var formattedDescription = HTMLprojectDescription.replace('%data%', project.description);
         var formattedImage = HTMLprojectImage.replace('%data%', project.images);
 
-        var combined = formattedTitle + formattedDates + formattedDescription + formattedImage;
+        var formattedProjectCombined = formattedTitle + formattedDates + formattedDescription + formattedImage;
 
-        $('.project-entry').append(combined);
+        $('.project-entry').append(formattedProjectCombined);
     });
 };
 
@@ -163,27 +163,6 @@ $(document).click(function(loc) {
 
     logClicks(x, y);
 });
-
-
-function locationFinder() {
-    var locations = [];
-
-    for (var contact in bio.contacts) {
-        locations.push(bio.contacts[contact].location);
-    }
-
-    for (var school in education.schools) {
-        locations.push(education.schools[school].location);
-    }
-
-    for (var job in work.jobs) {
-        locations.push(work.jobs[job].location);
-    }
-    console.log('locations: ', locations);
-    return locations;
-}
-
-locationFinder();
 
 
 function inName(name) {
