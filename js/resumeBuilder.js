@@ -132,7 +132,7 @@ education.display = function() {
         var formattedOnlineURL = HTMLonlineURL.replace('%data%', online.url);
         var formattedlink = formattedOnlineURL.replace('#', online.url);
 
-        var onlineCombined = formattedOnlineName + formattedOnlineShool + formattedOnlineDates + formattedOnlineURL;
+        var onlineCombined = formattedOnlineName + formattedOnlineShool + formattedOnlineDates + formattedlink;
 
         $('.education-entry:last').append(onlineCombined);
 
