@@ -32,9 +32,9 @@ var education = {
         degree: 'Bachelor',
         dates: '2021',
         majors: ['Economics'],
-        url:'www.comingsoon.com'
+        url: 'www.comingsoon.com'
     }],
-     onlineCourses: [{
+    onlineCourses: [{
         title: "Javascript Udacity",
         school: 'Udacity',
         dates: '2016',
@@ -80,7 +80,6 @@ bio.display = function() {
     $('#header').append(combined);
     $('#header').prepend(formattedRole);
     $('#header').prepend(formattedName);
-    
 
     var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
@@ -90,7 +89,7 @@ bio.display = function() {
     var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 
     var contactCombined = formattedMobile + formattedEmail + formattedTwitter + formattedGithub + formattedBlog + formattedLocation;
-    
+
     $('#topContacts').append(contactCombined);
     $('#footerContacts').append(contactCombined);
 
